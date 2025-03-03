@@ -1,3 +1,29 @@
 body{
-    background: #363636;
+    background: #bebebe;
+}
+
+.header{
+    color: rgb(255, 52, 52);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    width: 100%;    
+    top: 0px;
+    left: 0px;
+    background: #4d1f1f;
+}
+
+.botones{
+    top: 300px;
+}
+
+button{
+    font-size: 20px;
+    padding: 15px 30px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+
 }
