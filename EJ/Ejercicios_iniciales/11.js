@@ -1,6 +1,5 @@
-let pais= "Colombia"
-let idioma="Español"
+let dia = 'miercoles'
+let clase = 'algoritmos'
 
-if(pais == "Colombia"){
-    console.log(`En ${pais} puedes hablar ${idioma}`)
-}
+dia === 'miercoles' ? console.log(`la clase de hoy es ${clase}`) :
+    console.log(`no se encuentra ningun dato agendado`)

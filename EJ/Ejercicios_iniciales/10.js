@@ -1,22 +1,8 @@
-let alumno="Nico"
-let aprobo=false
-let reprobo=true
-let numeroDeNotas=6
-let calificacion= 1
+let encendido = false
+let velocidad = 134
 
-if(alumno=="Nico"){
-    console.log("\nPertenece a esta clase")
-}
-
-if(numeroDeNotas==6){
-    console.log("\nTiene todas las notas")
-}else{
-    console.log("\nConsulte con su director de grupo, para ver sus notas faltantes"); 
-}
-
-if(aprobo){
-    console.log("\nUsted ha aprobado")
-}else if(reprobo){
-    console.log("\nUsted ha reprobado")
-}
+encendido == true ? console.log(`su carro esta encendido`) :
+    velocidad == 0 ? console.log(`carro frenado`) :
+        velocidad > 0 && velocidad <=100 ? console.log(`carro en marcha`) :
+            console.log(`evite un accidente ... exceso de velocidad`) 
    
