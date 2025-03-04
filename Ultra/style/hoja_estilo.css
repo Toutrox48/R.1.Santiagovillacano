@@ -3,27 +3,38 @@ body{
 }
 
 .header{
-    color: rgb(255, 52, 52);
+    color: rgb(52, 157, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: absolute;
     width: 100%;    
     top: 0px;
     left: 0px;
-    background: #4d1f1f;
+    background: #97c9e0;
+    box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
 }
 
 .botones{
     top: 300px;
+    position: relative;
+    align-self: center;
+    
 }
 
-button{
-    font-size: 20px;
-    padding: 15px 30px;
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
 
+td{
+    color: rgb(76, 109, 141);
+    background: #97c9e0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
 }
+
+td:hover{
+    background-color: #29a9e4;
+    transform: scale(1.1);
+    cursor: grab;
+}
+
