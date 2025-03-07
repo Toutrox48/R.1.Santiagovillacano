@@ -108,57 +108,133 @@ function i11 () {
 }
 
 function i12 () {
-
+    let nombre = prompt('Ingrese nombre:');
+    let horas = parseInt(prompt('Ingrese horas:'));
+    let tarifa = horas <= 10 ? 30000 : 33000;
+    let salario = horas * tarifa;
+    alert(`Señor/a ${nombre}, el número de horas es ${horas} y su salario equivale a $${salario}.`);
 }
 
 function i13 () {
-
+    let numero = parseInt(prompt('Ingrese número:'));
+    alert(numero % 2 === 0 ? "El número es par" : "El número es impar");
 }
 
 function i14 () {
-
+    let tipoLavadora = parseInt(prompt('Ingrese tipoLavadora:'));
+    let cantidad = parseInt(prompt('Ingrese cantidad:'));
+    let horasAlquiler = parseInt(prompt('Ingrese horasAlquiler:'));
+    let tarifaLavadora = tipoLavadora === 1 ? 4000 : 3000;
+    let total = cantidad * horasAlquiler * tarifaLavadora;
+    if (cantidad > 3) total *= 0.97;
+    alert(`Costo total por alquilar ${cantidad} lavadoras tipo ${tipoLavadora} por ${horasAlquiler} horas: $${total}`);
 }
 
 function i15 () {
-
+    let numero = parseInt(prompt('Ingrese número:'));
+    alert(numero % 2 === 0 ? "El número es par" : "El número es impar");
 }
 
 function i16 () {
-
+    let fisica = parseFloat(prompt('Ingrese Física:'));
+    let quimica = parseFloat(prompt('Ingrese Química:'));
+    let biologia = parseFloat(prompt('Ingrese Biología:'));
+    let matematicas = parseFloat(prompt('Ingrese Matemáticas:'));
+    let informatica = parseFloat(prompt('Ingrese Informática:'));
+    let total = fisica + quimica + biologia + matematicas + informatica;
+    let porcentaje = (total / 50) * 100;
+    let calificacion = porcentaje > 80 ? "Excelente" : porcentaje >= 60 ? "Buena" : "Mala";
+    alert(`Tu porcentaje es ${porcentaje.toFixed(2)}% y tu calificación es ${calificacion}.`);
 }
 
 function i17 () {
-
+    let a = parseInt(prompt('Ingrese número 1:'));
+    let b = parseInt(prompt('Ingrese número 2:'));
+    let c = parseInt(prompt('Ingrese número 3:'));
+    alert(`El número mayor es ${Math.max(a, b, c)}`);
 }
 
 function i18 () {
-
+    let genero = prompt('Ingrese género (femenino/masculino):').toLowerCase();
+    let edad = parseInt(prompt('Ingrese edad:'));
+    let ayuda = genero === "femenino" ? (edad > 50 ? 120000 : edad >= 30 ? 100000 : 0) : genero === "masculino" ? 40000 : "Dato inválido";
+    alert(`El valor de ayuda mensual es: $${ayuda}.`);
 }
 
 function i19 () {
-
+    let dias = parseInt(prompt('Ingrese la cantidad de días (15, 30 o 90):'));
+    let costo = dias === 15 ? 18000 : dias === 30 ? 35000 : dias === 90 ? 86000 : "Dato inválido";
+    alert(`El costo por ${dias} días es: $${costo}`);
 }
 
 function i20 () {
-
+    let angulo1 = parseFloat(prompt('Ingrese ángulo 1:'));
+    let angulo2 = parseFloat(prompt('Ingrese ángulo 2:'));
+    let angulo3 = parseFloat(prompt('Ingrese ángulo 3:'));
+    alert(angulo1 + angulo2 + angulo3 === 180 ? "El triángulo es válido" : "El triángulo no es válido");
 }
 
 function i21 () {
-
+    let copias = parseInt(prompt('Ingrese copias:'));
+    let precio = copias >= 1000 ? 50 : copias >= 750 ? 80 : copias >= 500 ? 100 : 120;
+    alert(`Precio por copia: $${precio}, Precio total: $${precio * copias}`);
 }
 
 function i22 () {
+    let pitido = prompt('¿Escucha un pitido? (si/no):').toLowerCase();
+    let discoGira = prompt('¿El disco gira? (si/no):').toLowerCase();
 
+    if (pitido === "si" && discoGira === "si") {
+        alert("Póngase en contacto con el técnico de apoyo");
+    } else if (pitido === "si" && discoGira === "no") {
+        alert("Verificar contactos de la unidad");
+    } else if (pitido === "no" && discoGira === "no") {
+        alert("Traiga la computadora para repararla en la central");
+    } else {
+        alert("Compruebe las conexiones de altavoces");
+    }
 }
 
 function i23 () {
+    let modelo = parseInt(prompt('Ingrese modelo:'));
+    let defectuosos = [119, 179, 189, 190, 191, 192, 193, 194, 195, 221, 780];
 
+    if (defectuosos.includes(modelo)) {
+        alert("El automóvil está defectuoso, llevar a garantía");
+    } else {
+        alert("Su automóvil no está defectuoso");
+    }
 }
 
 function i24 () {
+    let operador = prompt('Ingrese operador (Claro, Tigo o Movistar):').trim();
+    let minutosInternacionales = Number(prompt('Ingrese minutos internacionales consumidos:'), 10);
+    let paquetededtos = prompt(`quiere adquirir paquete de datos(si/no):`).trim();
+    let tarifas = {
+        Tigo: { cargoFijo: 45000, valorMinuto: 200, paqueteDatos: 12000 },
+        Claro: { cargoFijo: 30000, valorMinuto: 100, paqueteDatos: 18000 },
+        Movistar: { cargoFijo: 40000, valorMinuto: 250, paqueteDatos: 8000 }
+    };
 
+    if (tarifas[operador] && !isNaN(minutosInternacionales) && minutosInternacionales >= 0) {
+        let { cargoFijo, valorMinuto, paqueteDatos } = tarifas[operador];
+        let totalCosto = cargoFijo + (valorMinuto * minutosInternacionales) + paqueteDatos;
+        
+        alert(`Costo total para ${operador} con ${minutosInternacionales} minutos internacionales: $${totalCosto}`);
+    } else {
+        alert('Operador no válido o minutos ingresados incorrectamente.');
+    }
 }
 
 function i25 () {
-
+    let tamano = prompt('Ingrese tamano:');
+    let ingredientes = prompt('Ingrese ingredientes:');
+    let costoBase = tamano === "pequeño" ? 6000 : 12000;
+    let costoIngredientes = 0;
+    for (let ing of ingredientes) {
+        if (ing !== "jalapeño") {
+            costoIngredientes += ing === "queso" ? 2500 : 3000;
+        }
+    }
+    alert(`Costo total del sándwich: $${costoBase + costoIngredientes}`);
 }
