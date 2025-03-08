@@ -9,46 +9,69 @@
 <body>
     <script src="ultra.js"></script>
     <section class="header" >
-        <center><h1 font="tahoma">Bienvenido</h1></center>
+<h1 font="tahoma">Bienvenido</h1>
     </section>
-    <center>
-    <table  class="botones">
-        <tr>
-            <td onclick="i1()">1</td>
-            <td onclick="i2()">2</td>
-            <td onclick="i3()">3</td>
-            <td onclick="i4()">4</td>
-            <td onclick="i5()">5</td>
-        </tr>
-        <tr>
-            <td onclick="i6()">6</td>
-            <td onclick="i7()">7</td>
-            <td onclick="i8()">8</td>
-            <td onclick="i9()">9</td>
-            <td onclick="i10()">10</td>
-        </tr>
-        <tr>
-            <td onclick="i11()">11</td>
-            <td onclick="i12()">12</td>
-            <td onclick="i13()">13</td>
-            <td onclick="i14()">14</td>
-            <td onclick="i15()">15</td>
-        </tr>
-        <tr>
-            <td onclick="i16()">16</td>
-            <td onclick="i17()">17</td>
-            <td onclick="i18()">18</td>
-            <td onclick="i19()">19</td>
-            <td onclick="i20()">20</td>
-        </tr>
-        <tr>
-            <td onclick="i21()">21</td>
-            <td onclick="i22()">22</td>
-            <td onclick="i23()">23</td>
-            <td onclick="i24()">24</td>
-            <td onclick="i25()">25</td>
-        </tr>
-    </table>
-    </center>
+    <div  class="botones">
+        <h3>Ejercicios</h3>
+        <table>
+            <tr>
+                <td onclick="i1()">1</td>
+                <td onclick="i2()">2</td>
+                <td onclick="i3()">3</td>
+                <td onclick="i4()">4</td>
+                <td onclick="i5()">5</td>
+            </tr>
+            <tr>
+                <td onclick="i6()">6</td>
+                <td onclick="i7()">7</td>
+                <td onclick="i8()">8</td>
+                <td onclick="i9()">9</td>
+                <td onclick="i10()">10</td>
+            </tr>
+            <tr>
+                <td onclick="i11()">11</td>
+                <td onclick="i12()">12</td>
+                <td onclick="i13()">13</td>
+                <td onclick="i14()">14</td>
+                <td onclick="i15()">15</td>
+            </tr>
+            <tr>
+                <td onclick="i16()">16</td>
+                <td onclick="i17()">17</td>
+                <td onclick="i18()">18</td>
+                <td onclick="i19()">19</td>
+                <td onclick="i20()">20</td>
+            </tr>
+            <tr>
+                <td onclick="i21()">21</td>
+                <td onclick="i22()">22</td>
+                <td onclick="i23()">23</td>
+                <td onclick="i24()">24</td>
+                <td onclick="i25()">25</td>
+            </tr>
+        </table>
+    </div>
+    <div class="container">
+        <h1>Dispensadora de Dulces 🍫🥤</h1>
+
+        <label for="tipoDulce">Seleccione un producto:</label>
+        <select id="tipoDulce">
+            <option value="1">Chocolatina - $700</option>
+            <option value="2">Refresco - $2500</option>
+        </select>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" min="1" value="1">
+
+        <label for="valorIngresado">Ingrese su dinero:</label>
+        <input type="number" id="valorIngresado" min="0">
+
+        <button onclick="procesarCompra()">Comprar</button>
+
+        <h2 id="resultado"></h2>
+
+        <button class="reload-button" onclick="location.reload()">volver</button>
+    </div>
 </body>
+
 </html>
