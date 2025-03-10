@@ -1,3 +1,5 @@
+do{
+    
 dia=prompt("¿Que dia de la semana es hoy?")
 clases=["algoritmos", "Diseño", "descansar"]
 if (dia=="lunes"){
@@ -15,3 +17,6 @@ if (dia=="lunes"){
 }else if (dia=="domingo"){
     alert(`Hoy toca ${clases[2]}`)
 }else {alert("...¿Que?...")}
+
+salir=String(prompt("desea salir? si - no"))
+}while(salir == "no")

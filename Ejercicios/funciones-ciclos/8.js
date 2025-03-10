@@ -1,3 +1,4 @@
+do{
 let email="santi@gmail.com"
 let contr="1234"
 ing_n=String(prompt("Digite su nombre:"))
@@ -9,3 +10,5 @@ if (ing_e == email && ing_c == contr){
 }else{
     alert(`contraseña o correo incorrectos...`)
 }
+salir=String(prompt("desea salir? si - no"))
+}while(salir == "no")

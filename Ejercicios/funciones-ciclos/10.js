@@ -1,3 +1,4 @@
+do{
 heli=String(prompt("¿esta dentro del helicoptero? (si) (no)")) 
 
 if(heli=="si"){
@@ -10,3 +11,5 @@ if(heli=="si"){
 }else if(heli=="no"){
     alert("¿porque?  :(")
 }else{alert("...¿Que?...")}
+salir=String(prompt("desea salir? si - no"))
+}while(salir == "no")
