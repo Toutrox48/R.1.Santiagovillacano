@@ -23,6 +23,6 @@ do{
     Operador = String(prompt("Bienvenid@ a Celu-Movil, escriba su operador para poder cobrarle el plan pospago de febrero, de lo contrario cortaremos su sercivio: tigo claro movistar"))
     min = parseInt(prompt("Ingrese la cantidad de minutos internacionales que gasto:"))
     datos = String(prompt("Incluyo plan de datos: (si) - (no)"))
-    salir=String(prompt("desea salir? si - no"))
     console.log(op())
+    salir=String(prompt("desea salir? si - no"))
 }while(salir !== "si")
