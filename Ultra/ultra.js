@@ -1,3 +1,11 @@
+//Funciones
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+
+
+//Ejercicios
 function i1 () {
     let estatura=prompt("digite su altura (cm):")
 
@@ -282,4 +290,43 @@ function i25 () {
         let n = totalFinal.toLocaleString("es-ES");
         alert(`El total a pagar por su sándwich es: $${n} pesos`);
     }
+}
+function blackjack () {
+    alert("🖤...Bienvenido a BlackJack...❤️")
+    alert("Reglas: son 5 rondas, en cada ronda se le preguntara a cada jugador si es que desea sacar una carta, si lo desea se le proporcionara una carta con un numero del 1 al 10 sumandosele a su putaje final, si no desea sacar carta pasata y no volvera a sacar mas cartas.")
+    alert("para que un jugador gane debe terminar con el puntaje mas cercano a 21, si se pasa de este numero perdera automaticamente.")
+    puntaje1=0
+    puntaje2=0
+    jugadaj1=""
+    jugadaj2=""
+    for (let i = 0; i < 3; i++) {
+        if (jugadaj1 !== "no"){
+            jugadaj1=String(prompt("Jugador 1 desea jugar(sacar una carta) : si - no"))
+            if (jugadaj1 !== "no"){
+                nr=parseInt(getRandomInt(1,10))
+                puntaje1 += nr
+                alert(`Jugador 1 usted saco ${nr}, su puntaje actual es de `+puntaje1)
+            }
+        }
+        if (jugadaj2 !== "no"){    
+            jugadaj2=String(prompt("Jugador 2 desea jugar(sacar una carta) : si - no"))
+            if (jugadaj2 !== "no"){
+                nr=parseInt(getRandomInt(1,10))
+                puntaje2 += nr
+                alert(`Jugador 2 usted saco ${nr}, su puntaje actual es de `+puntaje2)
+            }
+        }
+    }
+        
+    d1 = Math.abs(21 - puntaje1);
+    d2 = Math.abs(21 - puntaje2);
+
+    if (d1 < d2) {
+            alert("El número más cercano a 21 es: " + puntaje1 + " , Gano el primer jugador")
+        } else if (d2 < d1) {
+            alert("El número más cercano a 21 es: " + puntaje2 + " Gano el primer jugador")
+        } else {
+            alert("Ambos números están a la misma distancia de 21.")
+    }
+    
 }
