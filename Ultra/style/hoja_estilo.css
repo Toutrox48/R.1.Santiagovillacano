@@ -21,8 +21,7 @@ body{
 
 .botones{
     position: absolute;
-    top: 30%;
-    right: 100px;
+    top: 20%;
     padding: 20px;
 
     color: rgb(76, 109, 141);
