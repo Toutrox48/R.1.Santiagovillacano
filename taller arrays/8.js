@@ -5,4 +5,3 @@ const proyectos = [
   const nuevoProyecto = new Map([["nombre", "Proyecto C"], ["presupuesto", 6000]]);
   proyectos.push(nuevoProyecto);
   console.log(proyectos);
-  
