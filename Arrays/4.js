@@ -1,56 +1,71 @@
-codigo_productos= new Map([
-[1,"gomita"],[2,"chicle"],[3,"chocolate"],
-[4,"cocacola"],[5,"pepsi"]  
-])
-
-cantidad_productos= new Map([
-["gomita",10],["chicle",10],["chocolate",10],
-["cocacola",10],["pepsi",10]  
-])
-
-monedas = 0
-seleccion = 0
-const mostrar_productos = () => {
-    let productos = `Productos disponibles - cantidad - precio:\n`
-    for (let i = 1; i <= 5; i++) {
-        nombre = codigo_productos.get(i)
-        cantidad = cantidad_productos.get(codigo_productos.get(i)) 
-        productos += `${i}. ${nombre} - ${cantidad} - 1 moneda\n`
+const productos = new Map([
+    [1, { nombre: "gomita", cantidad: 10 }],
+    [2, { nombre: "chicle", cantidad: 10 }],
+    [3, { nombre: "chocolate", cantidad: 10 }],
+    [4, { nombre: "cocacola", cantidad: 10 }],
+    [5, { nombre: "pepsi", cantidad: 10 }],
+  ]);
+  
+  let monedas = 0;
+  let seleccion = 0;
+  
+  const mostrar_productos = () => {
+    let productos_str = "Productos disponibles - cantidad - precio:\n";
+    productos.forEach((producto, codigo) => {
+      productos_str += `${codigo}. ${producto.nombre} - ${producto.cantidad} - 1 moneda\n`;
+    });
+    alert(productos_str);
+  };
+  
+  const ingresar_monedas = () => {
+    monedas++;
+    alert(`Ingresaste 1 moneda...\nAhora tienes: ${monedas}`);
+  };
+  
+  const compra = () => {
+    if (monedas > 0) {
+      const producto = productos.get(Number(seleccion));
+      if (producto && producto.cantidad > 0) {
+        monedas--;
+        producto.cantidad--;
+        productos.set(Number(seleccion),producto);
+        alert(
+          `Usted ha comprado 1 ${producto.nombre}. Quedan ${producto.cantidad} unidades.\nTe quedan ${monedas} monedas.`
+        );
+      } else {
+        alert("Producto no disponible o cantidad insuficiente.");
+      }
+    } else {
+      alert("Monedas insuficientes.");
     }
-    alert(productos)
-}
-
-
-const ingresar_monedas = () =>{
-    monedas++
-    alert(`Ingresaste 1 moneda...\nAhora tienes: ${monedas}`)
-}
-
-const compra = () =>{
-    monedas--
-    resta=cantidad_productos.get(codigo_productos.get(seleccion))-1
-    alert(`Usted a comprado 1 ${codigo_productos.get(seleccion)} quedaron ${resta}\nTe quedan ${monedas} monedas`)
-}
-
-alert(compra())
-
-while(true){
-    var op = Number(prompt ("Digite:\n(1)-Para introducir una moneda.\n(2)-Para comprar un producto.\n(3)-Para reabastecer la maquina.\n(4)-salir.\n"))
-    if(op == 1){
-        console.log(ingresar_monedas())
-    }else if(op == 2){
-            let productos = `Producto - cantidad - precio: \n(digite el numero para seleccionar su compra)\n\n`
-            for (let i = 1; i <= 5; i++) {
-                nombre = codigo_productos.get(i)
-                cantidad = cantidad_productos.get(codigo_productos.get(i)) 
-                productos += `${i}. ${nombre} - ${cantidad} - 1 moneda\n`
-            }
-            seleccion = prompt(productos)
-            console.log(compra());
-            
-    }else if(op == 3){
-        
-    }else if(op == 4 ){
-        break
-    }  
-}
+  };
+  
+  const reabastecer_maquina = () => {
+    productos.forEach((producto) => {
+      producto.cantidad = 10;
+    });
+    alert("Máquina reabastecida.");
+  };
+  
+  while (true) {
+    const op = Number(
+      prompt(
+        "Digite:\n(1)-Para introducir una moneda.\n(2)-Para comprar un producto.\n(3)-Para reabastecer la máquina.\n(4)-salir.\n"
+      )
+    );
+    if (op === 1) {
+      ingresar_monedas();
+    } else if (op === 2) {
+      let productos_str =
+        "Producto - cantidad - precio: \n(digite el número para seleccionar su compra)\n\n";
+      productos.forEach((producto, codigo) => {
+        productos_str += `${codigo}. ${producto.nombre} - ${producto.cantidad} - 1 moneda\n`;
+      });
+      seleccion = prompt(productos_str);
+      compra();
+    } else if (op === 3) {
+      reabastecer_maquina();
+    } else if (op === 4) {
+      break;
+    }
+  }
