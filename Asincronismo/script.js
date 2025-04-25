@@ -19,12 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
         resultadoParrafo.textContent = resultado;
         cuadro.appendChild(resultadoParrafo);
     }
-
-    // 1. Operaciones síncronas vs asíncronas (implícito)
     // La inicialización del evento es síncrona.
     // La simulación del VAR con setTimeout es asíncrona.
 
-    // 2. Callbacks (ejemplo básico, aunque las Promesas son más elegantes aquí)
+    //Callbacks (ejemplo básico, aunque las Promesas son más elegantes aquí)
     function mostrarMensajeCallback(callback) {
         const mensajeEspera = document.createElement('p');
         mensajeEspera.textContent = 'Esperando la decisión del VAR...';
@@ -33,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // las Promesas o Async/Await son más adecuadas para manejar la asincronía.
     }
 
-    // 3. Promesas
+    // Promesas
     function pararPartidoConPromesas() {
         mostrarMensajeCallback(); // Muestra el mensaje de espera (síncrono)
         pararPartidoBtn.disabled = true; // Deshabilita el botón
@@ -51,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    // 4. Async/Await (una forma más moderna y legible de trabajar con Promesas)
+    // Async/Await (una forma más moderna y legible de trabajar con Promesas)
     async function pararPartidoConAsyncAwait() {
         mostrarMensajeCallback(); // Muestra el mensaje de espera (síncrono)
         pararPartidoBtn.disabled = true; // Deshabilita el botón
@@ -69,6 +67,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Evento al hacer clic en el botón (puedes elegir cuál de las funciones usar)
     pararPartidoBtn.addEventListener('click', pararPartidoConAsyncAwait);
-    // Si prefieres usar Promesas puras, usa la siguiente línea en su lugar:
-    // pararPartidoBtn.addEventListener('click', pararPartidoConPromesas);
+
 });
