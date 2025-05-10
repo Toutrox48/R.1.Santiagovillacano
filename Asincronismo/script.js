@@ -69,3 +69,4 @@ document.addEventListener('DOMContentLoaded', () => {
     pararPartidoBtn.addEventListener('click', pararPartidoConAsyncAwait);
 
 });
+
