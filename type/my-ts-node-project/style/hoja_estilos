@@ -1,0 +1,129 @@
+body{
+    background: #c4eeff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #e4dfdf;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header{
+    background-color: rgb(114, 187, 255);
+    color: white;
+    position: absolute;
+    width: 100%;    
+    top: 0px;
+    left: 0px;
+    box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+}
+
+.botones{
+    position: absolute;
+    top: 20%;
+    padding: 20px;
+
+    color: rgb(76, 109, 141);
+    width: 320px;
+    height: 400px;
+    background: #c4eeff;
+    border-radius: 5%;
+    box-shadow: 10px 10px 20px 0 rgba(20, 20, 20, 0.3);
+    margin: auto 0;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+
+td{
+    text-align: center;
+    background-color: rgb(114, 187, 255);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+td:hover{
+    background-color: rgb(76, 168, 255);
+    transform: scale(1.1);
+    cursor: grab;
+}
+
+/* Estilo del cuadro principal */
+.container {
+    position: absolute;
+    background: #c4eeff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 0 rgba(20, 20, 20, 0.3);
+    text-align: center;
+    width: 300px;
+    left: 200px;
+    color: rgb(76, 109, 141);
+}
+
+/* Estilo de los elementos del formulario */
+select, input{
+    width: 90%;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+
+    background-color: #97c9e0;
+}
+
+/* Estilo del botón */
+button {
+    background-color: rgb(114, 187, 255);
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Estilo del resultado */
+h2 {
+    margin-top: 15px;
+    color: #e4dfdf;
+}
+
+/* botoncito BlackJack */
+.botoncito {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgb(114, 187, 255) 8%, rgb(201, 0, 0) 90%, rgb(185, 0, 0) 100%);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s;
+    box-shadow: 10px 10px 20px 0 rgba(20, 20, 20, 0.3);
+    width: 120px;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    position: absolute;
+    bottom: 100px;
+}
+
+.botoncito:hover{
+    background: linear-gradient(90deg, rgb(201, 0, 0) 8%, rgb(114, 187, 255) 90%, rgb(114, 187, 255) 100%);
+    transform: scale(1.1);
+    cursor: grab;
+}
