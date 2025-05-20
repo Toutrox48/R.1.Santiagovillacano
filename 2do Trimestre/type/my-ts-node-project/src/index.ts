@@ -24,7 +24,7 @@ function i2(): void {
 }
 
 function i3(): void {
-  let pe = prompt("la peluqueria esta disponible?: (si o no)");
+  let pe:any = prompt("la peluqueria esta disponible?: (si o no)");
   const np = "Manolo";
 
   pe = pe?.toLowerCase(); // Ensure `pe` is a string and convert to lowercase
@@ -377,7 +377,7 @@ function i25(): void {
       queso: 2500
     };
 
-    let agregarTopping: string | null;
+    let agregarTopping: any;
     do {
       agregarTopping = prompt("¿con que lo desea? elija 1: (tocineta, jalapeño, pavo, queso, no)")?.toLowerCase();
       if (agregarTopping && preciosToppings[agregarTopping] !== undefined) {
@@ -400,8 +400,8 @@ function blackjack(): void {
 
   let puntaje1: number = 0;
   let puntaje2: number = 0;
-  let jugadaj1: string | null = "";
-  let jugadaj2: string | null = "";
+  let jugadaj1: string | any = "";
+  let jugadaj2: string | any = "";
 
   for (let i = 0; i < 3; i++) {
     if (jugadaj1 !== "no") {
