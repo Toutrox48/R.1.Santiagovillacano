@@ -1,0 +1,297 @@
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #ff6969; /* Pink */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e05c5c;
+}
+
+/* Header/Hero Section */
+.hero {
+    position: relative;
+    height: 400px; /* Adjust height for mobile */
+    background: url('https://cdn.discordapp.com/attachments/1356405202701521064/1377290613711700111/angel.jpg?ex=6841a7d7&is=68405657&hm=7bf085cb49f8f096b0e730afd44b335928cd8210c823c10a9a95a24b846d469d&') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3em; /* Adjust for mobile */
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* Section 1 */
+.section-1 {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.section-1 .container {
+    display: flex;
+    flex-direction: column; /* Stack vertically for mobile */
+    align-items: center;
+    text-align: center;
+}
+
+.section-1 .text-content {
+    margin-bottom: 20px;
+}
+
+.section-1 .text-content h2,
+.section-1 .text-content h3,
+.section-1 .text-content h4 {
+    color: #ff6969;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.section-1 .image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Section 2 */
+.section-2 {
+    background-color: #f0f0f0;
+    padding: 40px 0;
+}
+
+.section-2 .container {
+    display: flex;
+    flex-direction: column; /* Stack vertically for mobile */
+    align-items: center;
+    text-align: center;
+}
+
+.section-2 .image-content {
+    margin-bottom: 20px;
+}
+
+.section-2 .image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.section-2 .text-content h2,
+.section-2 .text-content h3,
+.section-2 .text-content h4 {
+    color: #e22b2b; /* Blue-violet */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Section 3 */
+.section-3 {
+    color: white;
+    padding: 40px 0;
+    background: url('https://cdn.discordapp.com/attachments/1356405202701521064/1377290615246819349/raptis.png?ex=6841a7d7&is=68405657&hm=b5116b2f92f211358da4710c84907f27e84a92632a2797716b27172b2bbb780e&');
+    height: 400px;
+}
+
+.section-3 .container {
+    display: flex;
+    flex-direction: column; /* Stack vertically for mobile */
+    align-items: center;
+    text-align: center;
+}
+
+.section-3 .image-content {
+    margin-bottom: 20px;
+}
+
+.section-3 .image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    filter: brightness(0.8); /* Slightly darken image to stand out against background */
+}
+
+.section-3 .text-content h2,
+.section-3 .text-content h3 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-grid {
+    display: flex;
+    flex-direction: column; /* Stack vertically for mobile */
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-col h5 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #ff6969; /* Pink */
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ff6969;
+}
+
+/* Media Queries for Tablet and Desktop */
+@media (min-width: 768px) {
+    .hero {
+        height: 500px;
+    }
+
+    .hero-content h1 {
+        font-size: 5em;
+    }
+
+    .section-1 .container,
+    .section-2 .container {
+        flex-direction: row; /* Side-by-side for larger screens */
+        text-align: left;
+        gap: 40px;
+    }
+
+    .section-1 .image-content,
+    .section-2 .image-content {
+        flex: 1;
+        order: 2; /* Image on the right for section 1 */
+        margin-bottom: 0;
+    }
+
+    .section-1 .text-content,
+    .section-2 .text-content {
+        flex: 1;
+        order: 1; /* Text on the left for section 1 */
+        margin-bottom: 0;
+    }
+
+    .section-2 .image-content {
+        order: 1; /* Image on the left for section 2 */
+    }
+
+    .section-2 .text-content {
+        order: 2; /* Text on the right for section 2 */
+    }
+
+    .section-3 .container {
+        flex-direction: row; /* Side-by-side for larger screens */
+        text-align: left;
+        gap: 40px;
+    }
+
+    .section-3 .image-content {
+        flex: 1;
+        margin-bottom: 0;
+    }
+
+    .section-3 .text-content {
+        flex: 1;
+    }
+
+    .footer-grid {
+        flex-direction: row; /* Columns for larger screens */
+        justify-content: space-around;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        height: 600px;
+    }
+
+    .hero-content h1 {
+        font-size: 6em;
+    }
+
+    .section-1 .text-content h2,
+    .section-1 .text-content h3,
+    .section-1 .text-content h4,
+    .section-2 .text-content h2,
+    .section-2 .text-content h3,
+    .section-2 .text-content h4 {
+        font-size: 2em;
+    }
+
+    .section-3 .text-content h2,
+    .section-3 .text-content h3 {
+        font-size: 3em;
+    }
+}
